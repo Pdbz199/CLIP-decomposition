@@ -163,9 +163,9 @@ Finally, we use `matplotlib` to plot our 2D points. Instead of just dots, we plo
 The image above shows the output of our analysis. Here's what we can observe:
 
 1.  **Clustering**: The algorithm automatically grouped the images into distinct categories.
-    *   **"Animal" Cluster (Purple)**: Contains the cats and the polar bear.
-    *   **"Food" Cluster (Green)**: Contains the pizza.
-    *   **"Object" Cluster (Yellow)**: Contains the dice.
+    *   **"Animal" Cluster (Dark Blue)**: Contains the cats and the polar bear.
+    *   **"Food" Cluster (Turquoise)**: Contains the pizza.
+    *   **"Object" Cluster (Lime Green)**: Contains the dice.
 2.  **Semantic Positioning**:
     *   The **Hot Dog** (bottom left) is particularly interesting. It is visually located between the "Food" cluster and the "Animal" cluster.
     *   While it is definitely food, CLIP's language understanding knows that the word "Hot Dog" contains the word "Dog" (an animal). This dual meaning or linguistic connection might influence its positioning in the embedding space, showing how CLIP bridges the gap between visual appearance and language semantics.
@@ -176,4 +176,4 @@ By following this pipeline, we've taken raw pixels, converted them into semantic
 
 The most powerful part is that **we didn't train a model to recognize these specific images.** CLIP already "knew" what a hot dog and a cat looked like because of its massive pre-training. We just used its internal knowledge to organize our own data.
 
-If you run the provided `clip_analysis.py` script, you will see how CLIP naturally separates different concepts—grouping animals together, food together, etc.—without us ever explicitly telling it what a "cat" or "hot dog" looks like.
+If you run the provided `clip_analysis.py` script, you will see how CLIP naturally separates different concepts, grouping animals together, food together, etc., without us ever explicitly telling it what a "cat" or "hot dog" looks like.
